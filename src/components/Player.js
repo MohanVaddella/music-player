@@ -14,26 +14,39 @@ const audioRef = useRef(null);
 
 
 
-  useEffect(() => {
-    if (isPlaying && audioRef.current) {
-      audioRef.current.play();
-    } else if (audioRef.current) {
-      audioRef.current.pause();
-    }
+useEffect(() => {
+  const audio = audioRef.current; // Capture the audio ref
+  if (isPlaying && audio) {
+    audio.play();
+  } else if (audio) {
+    audio.pause();
+  }
 
-    return () => {
-      // Cleanup: Pause the audio when the component unmounts
-      if (audioRef.current) {
-        audioRef.current.pause();
-      }
-    };
-  }, [isPlaying, currentSong]);
-
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = volume;
+  return () => {
+    // Cleanup: Pause the audio when the component unmounts
+    if (audio) {
+      audio.pause();
     }
-  }, [volume]);
+  };
+}, [isPlaying, currentSong]);
+
+useEffect(() => {
+  const audio = audioRef.current;
+  if (audio) {
+    audio.volume = volume;
+  }
+}, [volume]);
+
+useEffect(() => {
+  const audio = audioRef.current;
+  return () => {
+    if (audio) {
+      audio.pause();
+    }
+  };
+}, []);
+
+  
   
   useEffect(() => {
     if (currentSong) {
@@ -65,7 +78,7 @@ const audioRef = useRef(null);
       };
     }
   }, [currentSong]);
-  
+
 
   const handlePlayPause = () => {
     setIsPlaying(!isPlaying);
