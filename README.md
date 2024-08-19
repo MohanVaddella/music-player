@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Music Player Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Frontend Assessment: Task Music Player UI
 
-## Available Scripts
+This is a responsive music player application built using React JS as part of a frontend assessment. The application interface is designed to match a given Figma design and is fully responsive, featuring music controls, a dynamic background gradient, and smooth animations.
 
-In the project directory, you can run:
+## Design Link
+- [Figma Design](https://www.figma.com/file/RtKhzEeeuD2FtRsg2dxSep/Front-end-Assessment?type=design&node-id=1-2&mode=design&t=zEkwOdYyaeNx0z7m-4)
 
-### `npm start`
+## API Information
+- [API Endpoint](https://cms.samespace.com/items/songs)
+- The API returns different titles, artists, cover images, and durations, but the URL of every song will be the same.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **React JS**: The application is built using React JS.
+2. **Design Matching**: The interface matches the provided Figma design closely.
+3. **Responsiveness**: The application is responsive. On smaller screens, the player component becomes the main interface with a menu button to show the list of songs.
+4. **REST API Integration**: The application uses REST API to load the list of songs.
+5. **Dynamic Background Gradient**: The background gradient color changes according to the cover image of the currently playing song.
+6. **Persistent Music Playback**: Music continues playing even if the user switches to another tab.
+7. **Fluid and Interactive Interface**: The interface includes animations/transitions, such as list loading animations and background color change animations.
+8. **Search Functionality**: Users can search for songs.
+9. **Music Control**: Users can control the music with play/pause, next/previous buttons, and a seeker to control the song's playback.
+10. **Tab Navigation**: Users can switch between tabs (e.g., "For You" and "Top Tracks").
+11. **Deployment**: The application is deployable on platforms like Vercel or Netlify.
 
-### `npm test`
+### Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **src/**: Contains all the source code files.
+  - **components/**: Reusable React components such as Player, SongList, Header, etc.
+  - **styles/**: CSS files for styling the components.
+  - **utils/**: Utility functions for common tasks like API calls.
+  - **App.js**: The main application component that contains routing and main logic.
+  - **index.js**: The entry point of the application.
 
-### `npm run build`
+## Installation and Running the Application
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js and npm must be installed on your system.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation Steps
 
-### `npm run eject`
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/MohanVaddella/music-player.git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Navigate to the Project Directory**
+   ```bash
+   cd music-player
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Install Dependencies**
+   ```bash
+   npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Running the Application
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Start the Development Server**
+   ```bash
+   npm start
 
-## Learn More
+This will start the application on `http://localhost:3000/`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **Build the Application for Production**
+   ```bash
+   npm run build
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This will create an optimized production `build` in the build folder.
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To deploy the application on Vercel or Netlify:
 
-### `npm run build` fails to minify
+- **Vercel**: Push the repository to GitHub, and link it to a new Vercel project.
+  
+- **Netlify**: Push the repository to GitHub, and link it to a new Netlify project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
