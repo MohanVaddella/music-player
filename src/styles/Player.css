@@ -1,0 +1,140 @@
+.player-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-color);
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%; /* Ensure it takes the full width */
+  position: relative;
+  top: 32px;
+  left: -120px;
+}
+
+.player-songlist-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-color);
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px; /* Set a maximum width for the player */
+  flex: 1;
+}
+
+.song-list {
+  background-color: #181818;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  max-width: 400px; /* Set a maximum width for the song list */
+  flex: 1;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.song-list-item img {
+  width: 50px; /* Resize the song list item image */
+  height: 50px; /* Resize to match width */
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.song-details {
+  display: flex;
+  flex-direction: column;
+  
+  margin-bottom: 20px;
+}
+
+.song-details img {
+  width: 250px; /* Adjust cover image size */
+  height: 250px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.song-info h4 {
+  margin: 0;
+  font-size: 1em;
+  text-align: left;
+}
+
+.song-info p {
+  margin: 5px 0 0;
+  color: #666;
+  text-align: left;
+}
+
+.seeker {
+  width: 83%;
+  margin: 10px 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #fff;
+}
+
+.controls button:focus {
+  outline: none;
+}
+
+.volume-control {
+  width: 100%;
+  margin: 0;
+}
+
+.volume-control-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.volume-slider {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50px;
+  width: 6px;
+  height: 100px;
+  background: #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  appearance: none;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  width: 5px;
+  height: 10px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  cursor: pointer;
+  appearance: none;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 5px;
+  height: 10px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  cursor: pointer;
+}

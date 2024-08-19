@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    background-color: #121212; /* Dark background color */
+    color: #fff; /* Light text color */
+    line-height: 1.6;
+    transition: background-color 0.1s ease; /* Smooth transition for background color */
+}
+
+/* Ensure full height for the main container */
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* Flexbox utility classes */
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container class for centering content */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Button styles */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: inherit;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Music player styles */
+.player {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #282828; /* Darker shade for player background */
+    border-top: 1px solid #444; /* Subtle border for player */
+    color: #fff;
+}
+
+.player .controls {
+    margin-left: auto;
+}
+
+.player .controls button {
+    margin: 0 0.5rem;
+}
+
+/* Header styling */
+.header {
+    background-color: transparent; /* Transparent background to show the gradient */
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.header .logo h1 {
+    margin: 0;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header .nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.header .nav ul li {
+    margin-right: 1rem;
+    color: #bbb; /* Lighter shade for inactive nav items */
+}
+
+.header .nav ul li.active {
+    color: #fff; /* Active nav item */
+    font-weight: bold;
+}
+
+/* Song List Styles */
+.song-list {
+    background-color: #181818; /* Darker background for the song list */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.song-list-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: inherit;
+}
+
+.song-list-item:hover {
+    background-color: #282828; /* Highlight on hover */
+}
+
+.song-list-item img {
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.song-list-item .song-info {
+    flex: 1;
+    color: #ddd; /* Lighter text for song info */
+}
+
+.song-list-item .song-info .song-name {
+    flex: 1;
+    color: #fff;
+}
+
+.song-list-item .song-duration {
+    color: #bbb;
+}
+
+.player-songlist-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .player-container {
+    flex: 1;
+    max-width: 300px;
+  }
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .nav ul {
+        flex-direction: column;
+    }
+
+    .header .nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .player {
+        flex-direction: column;
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .song-list-container {
+      width: 100%;
+      margin: 0;
+      display: none; /* Hide song list by default */
+    }
+  
+    .player-container {
+      width: 100%;
+      padding: 20px;
+      left: 0;
+    }
+  
+    .controls {
+      flex-direction: column;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+    }
+  
+    .nav li {
+      margin: 10px 0;
+    }
+  
+    .logo {
+      justify-content: center;
+    }
+  
+    .menu-button {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 1.5em;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .menu-button {
+      display: none; /* Hide menu button on larger screens */
+    }
+  
+    .song-list-container {
+      display: block; /* Show song list on larger screens */
+    }
+  }
