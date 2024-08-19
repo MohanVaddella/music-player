@@ -4,6 +4,9 @@
 
 This is a responsive music player application built using React JS as part of a frontend assessment. The application interface is designed to match a given Figma design and is fully responsive, featuring music controls, a dynamic background gradient, and smooth animations.
 
+## Deploy Link
+- [Music Player](https://cmsmusicplayer.netlify.app/)
+  
 ## Design Link
 - [Figma Design](https://www.figma.com/file/RtKhzEeeuD2FtRsg2dxSep/Front-end-Assessment?type=design&node-id=1-2&mode=design&t=zEkwOdYyaeNx0z7m-4)
 
